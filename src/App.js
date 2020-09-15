@@ -7,11 +7,9 @@ import ChoiceCard from "./components/ChoiceCard";
 import { CHOICES, getRandomChoice, getRoundOutcome } from "./utils/index";
 import ChoiceButtons from "./components/ChoiceButtons";
 
-
-
 function App() {
   const [prompt, setGamePrompt] = useState("1, 2, 3, SHOOT!");
-  
+
   const [playerChoice, setPlayerChoice] = useState(null);
   const [computerChoice, setComputerChoice] = useState(null);
   const [previousWinner, setPreviousWinner] = useState(null);
@@ -41,7 +39,7 @@ function App() {
     gameHistory.push(result);
     console.log(gameHistory);
 
-    setGameHistory(gameHistory);
+    setGameHistory([...gameHistory]);
   };
 
   return (
